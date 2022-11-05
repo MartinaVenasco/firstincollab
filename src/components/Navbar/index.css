@@ -1,0 +1,196 @@
+.Navbar {
+  background-color: whitesmoke;
+  height: 70px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Navbar__list {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: 290px;
+  list-style-type: none;
+  margin-top: -60px;
+}
+
+.Navbar__list a {
+  color: #515151;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.Navbar__list a:hover {
+  color: rgb(9, 255, 206);
+}
+.logo {
+  width: 350px;
+  margin-right: 50px;
+  padding: 5px;
+  align-self: flex-start;
+  margin-left: 220px;
+}
+.filterInput {
+  height: 20px;
+  margin-top: 10px;
+  background-color: rgb(235, 236, 237);
+  border-color: white;
+  border-radius: 30px;
+  color: white;
+  width: 190px;
+  align-self: flex-end;
+  margin-right: 300px;
+  margin-top: 30px;
+}
+.filterInput::placeholder {
+  color: rgb(176, 176, 176);
+  padding-left: 10px;
+}
+input:focus {
+  outline: none;
+  border-color: white;
+  background-color: rgba(244, 231, 173, 0.453);
+}
+.Button__clear--filter {
+  width: 50px;
+}
+.logout {
+  margin-left: 55px;
+}
+
+.NavBar_hamb button {
+  right: 87px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  justify-content: right;
+  position: fixed;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  background: darkcyan;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  right: -40px;
+  overflow: hidden;
+  max-width: 220px;
+  position: fixed;
+  z-index: 9;
+}
+.NavBar_hamb {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9;
+}
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.list_menu_hamb {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #3fffd2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+@media (max-width: 767px) {
+  .Navbar {
+    background-color: whitesmoke;
+    height: 70px;
+    width: 100vw;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 150px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  .Navbar__list {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-right: 20px;
+    list-style-type: none;
+    margin: 30px;
+    margin-left: -130px;
+    height: 10px;
+  }
+  
+  .filterInput {
+    height: 20px;
+    margin-top: 10px;
+    background-color: rgb(235, 236, 237);
+    border-color: white;
+    border-radius: 30px;
+    color: white;
+    width: 300px;
+    align-self: flex-end;
+    margin-left: 540px;
+
+  }
+
+  .NavBar_hamb button {
+    right: 40px;
+    top: 40px;
+    z-index: 10;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    justify-content: right;
+    position: fixed;
+  }
+
+  .menuNav {
+    overflow-y: scroll;
+    list-style: none;
+    background: darkcyan;
+    bottom: 0;
+    top: -30px;
+    height: 100vh;
+    width: 0;
+    right: -40px;
+    overflow: hidden;
+    max-width: 280px;
+    position: fixed;
+    z-index: 9;
+  }
+  .NavBar_hamb {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9;
+  }
+  .menuNav.showMenu {
+    width: 100%;
+  }
+
+  .list_menu_hamb {
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #3fffd2;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .menuNav li:first-child {
+    margin-top: 7rem;
+  }
+}
