@@ -1,15 +1,15 @@
 import styles from "./index.module.scss";
-import { TiSocialInstagramCircular } from "react-icons/ti";
+import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
-import {AiFillGithub} from 'react-icons/ai'
+import { BsGithub } from "react-icons/bs";
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerEls}>
         <div className={styles.icons}>
-          <TiSocialInstagramCircular className={styles.icon} />
+          <RiInstagramFill className={styles.icon} />
           <FaFacebookSquare className={styles.icon} />
-         <AiFillGithub/>
+           <a href="https://github.com/MartinaVenasco/firstincollab"> <BsGithub className={styles.icon} /></a>
         </div>
         <p> All rights reserved </p>
       </div>
