@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+
+.footer {
+  .footerEls {
+    @include flex-container($justify: space-between, $align: center, $gap: 0);
+    padding-right: 10%;
+    padding-left: 10%;
+    .icons {
+      @include flex-container($gap: 10px, $align: center);
+      font-size: 1.3rem;
+      a {margin-top: 5px;
+      }
+      .icon {
+        color: rgba(230, 230, 230, 0.908);
+        &:hover {
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+  background-color: rgb(16, 16, 16);
+  padding: 8px;
+  color: rgb(230, 230, 230);
+  position: fixed;
+  width: 100%;
+}
