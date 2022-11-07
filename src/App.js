@@ -1,9 +1,11 @@
-import styles from  "./app.module.scss";
-import Footer from './components/Footer'
+import styles from "./app.module.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className={styles.app}>
-      <Footer/>
+      <Header />
+      {/* <Footer /> */}
     </div>
   );
 }

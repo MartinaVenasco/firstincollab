@@ -1,2 +1,14 @@
-.app {background-color: #121212;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  background-color: #121212;
+  //questi sotto sono utili se mettiamo una img di sfondo
+  background-size: cover;
+  background-position: center;
 }
