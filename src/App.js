@@ -5,7 +5,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Header />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

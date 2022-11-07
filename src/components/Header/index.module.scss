@@ -3,9 +3,14 @@
 .header {
   overflow: hidden;
   .menuIcon {
+    @include flex-container($justify: flex-end);
+    height: 30%;
+
     .menuIconOpen {
+      margin: 0.5rem;
       display: none;
       cursor: pointer;
+      color: white;
     }
   }
 
@@ -26,13 +31,14 @@
       transition: 1s ease;
 
       .menuIconClosed {
-        @include flex-container($justify: flex-start);
+        @include flex-container($justify: flex-end);
         display: none;
         cursor: pointer;
         width: 100%;
-        background-color: black;
 
-        .IconClosed {
+        .iconClosed {
+          margin: 0.5rem;
+          color: white;
         }
       }
 
@@ -74,7 +80,7 @@
         @include flex-container($direction: column, $align: center);
 
         .menuIconClosed {
-          @include flex-container($justify: flex-start);
+          @include flex-container($justify: flex-end);
 
           cursor: pointer;
           width: 100%;

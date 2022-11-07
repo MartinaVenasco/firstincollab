@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { CgMenuRight } from "react-icons/cg";
+import { AiOutlineClose } from "react-icons/ai";
 import styles from "./index.module.scss";
 
 const Header = () => {
@@ -11,18 +13,12 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.menuIcon}>
-        <span onClick={showMenu} className={styles.menuIconOpen}>
-          {/* Trovata l'icona, da sostituire all'emoji, qui la classe è styles.menuIconOpen */}
-          🍔
-        </span>
+        <CgMenuRight className={styles.menuIconOpen} onClick={showMenu} />
       </div>
       <nav className={`${styles.slider} ${menuActive ? styles.active : ""}`}>
         <ul>
           <div className={styles.menuIconClosed}>
-            <span onClick={showMenu}>
-              {/* Trovata l'icona, da sostituire all'emoji, qui la classe è styles.IconClosed */}
-              ✖️
-            </span>
+            <AiOutlineClose onClick={showMenu} className={styles.iconClosed} />
           </div>
           <li>
             <Link to="/">Home</Link>
