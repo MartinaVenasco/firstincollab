@@ -7,6 +7,7 @@
     height: 30%;
 
     .menuIconOpen {
+      font-size: 2rem;
       margin: 0.5rem;
       display: none;
       cursor: pointer;
@@ -28,6 +29,7 @@
         // $align: center
       );
       width: 100%;
+      font-size: 1.3rem;
       transition: 1s ease;
 
       .menuIconClosed {
@@ -38,6 +40,7 @@
 
         .iconClosed {
           margin: 0.5rem;
+          font-size: 2rem;
           color: white;
         }
       }
