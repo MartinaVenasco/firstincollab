@@ -1,6 +1,8 @@
 @import "../../styles/mixins";
 
 .footer {
+position: fixed;
+bottom: 0;
   .footerEls {
     @include flex-container($justify: space-between, $align: center, $gap: 0);
     padding-right: 10%;
