@@ -1,0 +1,11 @@
+@import "../../styles/_mixins.scss";
+
+.MainSection {
+  @include flex-container(column);
+
+  width: 100%;
+
+  p {
+    color: lightseagreen;
+  }
+}
