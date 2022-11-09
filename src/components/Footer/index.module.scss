@@ -1,8 +1,9 @@
 @import "../../styles/mixins";
 
 .footer {
-position: fixed;
-bottom: 0;
+  position: fixed;
+  bottom: 0;
+
   .footerEls {
     @include flex-container($justify: space-between, $align: center, $gap: 0);
     padding-right: 10%;
@@ -10,7 +11,8 @@ bottom: 0;
     .icons {
       @include flex-container($gap: 10px, $align: center);
       font-size: 1.3rem;
-      a {margin-top: 5px;
+      a {
+        margin-top: 5px;
       }
       .icon {
         color: rgba(230, 230, 230, 0.908);
