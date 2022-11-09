@@ -3,17 +3,17 @@ import { GET } from "../../utils/api";
 import "./index.css";
 
 const MainSection = () => {
-  const [topTracks, setToptracks] = useState({});
+  const [artists, setArtists] = useState({});
 
   useEffect(() => {
-    GET("method=tag.", "gettoptracks&tag=disco", "&format=json").then((data) =>
-    setToptracks((prev) => ({ ...prev, data: data.tracks.track})));
+    GET("method=library.", "getartists", "&user=joanofarctan&format=json").then((data) =>
+    setArtists((prev) => ({ ...prev, data: data.artists.artist})));
   }, []);
 
 
   return (
     <div className="MainSection">
-      {topTracks.data && topTracks.data.map((data, index) => <p key={index}> {data.name} </p>)}
+      {artists.data && artists.data.map((data, index) => <p key={index}> {data.name} </p>)}
     </div>
   );
 };
