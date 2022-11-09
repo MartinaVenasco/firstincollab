@@ -8,7 +8,8 @@ const MainSection = ({ modalVisibility, movieEntity, ScrollTop }) => {
  
   useEffect(() => {
     GET("method=tag.", "gettoptracks&tag=disco", "&format=json").then((data) =>
-      setTrackList((prev) => ({ ...prev, data: data.tracks.track }));
+      setTrackList((prev) => ({ ...prev, data: data.tracks.track })));
+
     GET("method=library.", "getartists", "&user=joanofarctan&format=json").then(
       (data) => setArtists((prev) => ({ ...prev, data: data.artists.artist }))
     );
