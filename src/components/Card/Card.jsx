@@ -34,7 +34,7 @@ const Card = () => {
           x
         </span>
       ) : null} */}
-      <div className={styles.ItemCard}>
+      <div className={styles.Card}>
         <div className={styles.imgContainer}>
           <div className={styles.overlayimg} />
           <img
@@ -46,7 +46,7 @@ const Card = () => {
           <div className={styles.MainText}>
             <h1
               // onClick={handleActivityClick}
-              className={styles.ActivityTitle}
+              className={styles.CardTitle}
             >
               nome della canzone
             </h1>
