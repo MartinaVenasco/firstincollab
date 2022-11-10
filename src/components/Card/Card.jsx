@@ -1,25 +1,13 @@
-// import { useRouter } from "next/router";
 import { memo } from "react";
-// import { useDispatch } from "react-redux";
 import styles from "./index.module.scss";
 
-const Card = () => {
-  // const { id, title, cover_image_url, retail_price, uuid } = data;
+const Card = ({ artistData }) => {
+  const { name, image } = artistData;
 
-  // const dispatch = useDispatch();
   // const router = useRouter();
 
-  // console.log(router.pathname);
-
-  // const handleOnDeleteBtn = () => {
-  //   dispatch({ type: "REMOVE_FAVORITE", payload: uuid });
-  // };
-
-  // const handleOnAddCartClick = () => {
-  //   dispatch({ type: "SET_TRUE" });
-  //   dispatch({ type: "ADD_PRODUCT", payload: cardData });
-  // };
-
+  const imagev = image[1][`#text`];
+  // const imgurl = console.log (Object.values(imagev[1]))
   // const handleActivityClick = () => {
   //   router.push({
   //     pathname: `/../activity/[uuid]`,
@@ -37,10 +25,7 @@ const Card = () => {
       <div className={styles.Card}>
         <div className={styles.imgContainer}>
           <div className={styles.overlayimg} />
-          <img
-            // src={cover_image_url} id={id}
-            alt="img"
-          />
+          <img src={imagev} alt="img" />
         </div>
         <div className={styles.all_text_container}>
           <div className={styles.MainText}>
@@ -48,7 +33,7 @@ const Card = () => {
               // onClick={handleActivityClick}
               className={styles.CardTitle}
             >
-              nome della canzone
+              {name}
             </h1>
           </div>
           {/* {router.pathname !== "/mytrip" ? (

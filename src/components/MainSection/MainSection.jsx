@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { GET } from "../../utils/api";
 import styles from "./index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
+import CardList from "../CardList/CardList";
 
 const MainSection = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const MainSection = () => {
   return (
     <div className={styles.MainSection}>
       <div>
+      <CardList />
         <h1>ARTISTS </h1>
         {artistData?.artists.map((data, index) => (
           <p key={index}> {data.name} </p>
