@@ -1,9 +1,8 @@
 import styles from "./index.module.scss";
 import Card from "../Card";
-// import { useSelector } from "react-redux";
 
 const CardList = () => {
-  // const { activities } = useSelector((state) => state);
+
 
   return (
     <div className={styles.CardList}>
