@@ -1,8 +1,8 @@
 import { memo } from "react";
 import styles from "./index.module.scss";
 
-const Card = ({ artistData }) => {
-  const { name, image } = artistData;
+const Card = ({ data }) => {
+  const { name, image } = data;
 
   // const router = useRouter();
 

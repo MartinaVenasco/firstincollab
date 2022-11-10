@@ -22,17 +22,15 @@ const MainSection = () => {
   return (
     <div className={styles.MainSection}>
       <div>
-      <CardList />
         <h1>ARTISTS </h1>
-        {artistData?.artists.map((data, index) => (
-          <p key={index}> {data.name} </p>
-        ))}
+        {artistData.artists && (<CardList element={"artists"} data={artistData.artists}/>) } 
       </div>
       <div>
         <h1>TRACKS </h1>
-        {trackData?.trackList?.map((data, index) => (
+        {trackData.trackList && (<CardList element={"tracks"} data={trackData.trackList}/>) } 
+        {/* {trackData?.trackList?.map((data, index) => (
           <p key={index}>{data.name}</p>
-        ))}
+        ))} */}
       </div>
     </div>
   );
