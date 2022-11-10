@@ -1,42 +1,35 @@
 import { combineReducers, createStore } from "redux";
 
 const initialState = {
-  cartData: {
-    Uuid: "",
-    cartList: [],
-    purchasedList: [],
-  },
+  // cardData: {
+  //   Uuid: "",
+  // },
+  artistData: { artists: []},
 
-  modalVisibility: false,
+  trackData: { trackList: [] },
 
-  loginModalVisibility: false,
+  // modalVisibility: false,
 
-  user_data: {
-    userName: "",
-  },
+  // loginModalVisibility: false,
+
+  // user_data: {
+  //   userName: "",
+  // },
 };
 
-function cartDataReducer(state = {}, action) {
+function artistReducer(state = {}, action) {
   switch (action.type) {
-    case "ADD_PRODUCT":
-      state.cartList = [...state.cartList, action.payload];
-      localStorage.setItem("cart", JSON.stringify(state.cartList));
-      return { ...state, cartList: state.cartList };
-    case "REMOVE_PRODUCT":
-      state.cartList = state.cartList.filter((_, id) => id !== action.payload);
-      localStorage.setItem("cart", JSON.stringify(state.cartList));
-      return {
-        ...state,
-        cartList: state.cartList,
-      };
-    case "SET_UUID":
-      return { ...state, Uuid: action.payload };
-    case "BUY_ITEMS":
-      return { ...state, purchasedList: state.cartList };
-    case "CLEAR_PRODUCT":
-      return { ...state, cartList: [] };
-    case "RESTORE_CART":
-      return { ...state, cartList: action.payload };
+    case "SET_ARTIST_LIST":
+      return { ...state, artists: action.payload };
+    default:
+      return state;
+  }
+}
+
+function tracksReducer(state = {}, action) {
+  switch (action.type) {
+    case "SET_TRACK_LIST":
+      return { ...state, trackList: action.payload };
     default:
       return state;
   }
@@ -74,7 +67,8 @@ function userDataReducer(state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-  cartData: cartDataReducer,
+  artistData: artistReducer,
+  trackData: tracksReducer,
   modalVisibility: modalVisibilityChangeReducer,
   loginModalVisibility: loginModalVisibilityReducer,
   user_data: userDataReducer,
