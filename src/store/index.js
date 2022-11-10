@@ -4,7 +4,7 @@ const initialState = {
   // cardData: {
   //   Uuid: "",
   // },
-  artistData: { artists: []},
+  artistData: { artists: [] },
 
   trackData: { trackList: [] },
 
