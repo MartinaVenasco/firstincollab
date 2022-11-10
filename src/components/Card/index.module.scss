@@ -61,11 +61,12 @@
 
       .MainText {
         @include flex-container(column, $gap: 0.3125rem, $justify: center);
+        width: 100%;
 
         .CardTitle {
-          @include text(0.6rem, 600, uppercase, $color: white);
+          @include text(0.9rem, 600, $color: lightseagreen);
 
-          width: 80%;
+          width: 100%;
         }
       }
       // .CartItem {
@@ -133,9 +134,9 @@
           @include flex-container(column, $gap: 10px, $justify: center);
 
           .CardTitle {
-            @include text(0.8rem, 700, uppercase, $color: white);
+            @include text(0.9rem, 700);
 
-            width: 90%;
+            width: 100%;
           }
         }
         // .CartItem {
